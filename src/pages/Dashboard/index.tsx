@@ -4,14 +4,14 @@ import Header from "../../components/Header";
 import api from "../../services/api";
 import Food from "../../components/Food";
 import ModalAddFood from "../../components/ModalAddFood";
-import ModalEditFood from "../../components/ModalEditFood";
+import { ModalEditFood } from "../../components/ModalEditFood";
 import { FoodsContainer } from "./styles";
 
-interface FoodProps{
+interface FoodProps {
   id: number;
   name: string;
   description: string;
-  image: string
+  image: string;
 }
 
 export function Dashboard() {
@@ -44,10 +44,13 @@ export function Dashboard() {
 
   async function handleUpdateFood(food: FoodProps) {
     try {
-      const foodUpdated = await api.put(`/foods/${editingFood == null ? editingFood!.id : ""}`, {
-        ...editingFood,
-        ...food,
-      });
+      const foodUpdated = await api.put(
+        `/foods/${editingFood!.id}`,
+        {
+          ...editingFood,
+          ...food,
+        }
+      );
 
       const foodsUpdated = foods.map((f) =>
         f.id !== foodUpdated.data.id ? f : foodUpdated.data
@@ -91,7 +94,7 @@ export function Dashboard() {
       <ModalEditFood
         isOpen={editModalOpen}
         setIsOpen={toggleEditModal}
-        editingFood={editingFood}
+        editingFood={editingFood!}
         handleUpdateFood={handleUpdateFood}
       />
 
