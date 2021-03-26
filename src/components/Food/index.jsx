@@ -4,6 +4,32 @@ import { FiEdit3, FiTrash } from 'react-icons/fi';
 import { Container } from './styles';
 import api from '../../services/api';
 
+// interface Food{
+//   id: number;
+//   name: string;
+//   description: string;
+//   image: string
+// }
+
+// interface FoodProps{
+//   food: Food;
+//   isAvailable: boolean;
+//   setIsAvailable: (boolean) => void;
+// }
+
+// export function Food(props: FoodProps){
+//   async function toggleAvailable(){
+//     await api.put(`/foods/${props.food.id}`, {
+//       ...props.food,
+//       available: !props.isAvailable,
+//     });
+
+//     props.setIsAvailable(!props.isAvailable);
+//   }
+
+//   return ();
+// }
+
 class Food extends Component {
   constructor(props) {
     super(props);
