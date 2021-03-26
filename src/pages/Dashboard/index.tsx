@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-import Header from "../../components/Header";
+import { Header } from "../../components/Header";
 import api from "../../services/api";
-import Food from "../../components/Food";
+import {Food} from "../../components/Food";
 import { ModalAddFood } from "../../components/ModalAddFood";
 import { ModalEditFood } from "../../components/ModalEditFood";
 import { FoodsContainer } from "./styles";
@@ -12,6 +12,8 @@ interface FoodProps {
   name: string;
   description: string;
   image: string;
+  price: number;
+  available: boolean;
 }
 
 export function Dashboard() {
@@ -101,7 +103,7 @@ export function Dashboard() {
             <Food
               key={food.id}
               food={food}
-              handleDelete={handleDeleteFood}
+              handleDeleteFood={handleDeleteFood}
               handleEditFood={handleEditFood}
             />
           ))}

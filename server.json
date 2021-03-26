@@ -23,22 +23,6 @@
       "price": "25.90",
       "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
-    },
-    {
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
-      "name": "Moda Italiana 3",
-      "price": "20,91",
-      "description": "Teste 2",
-      "available": true,
-      "id": 4
-    },
-    {
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
-      "name": "Camarao 2",
-      "price": "15,20",
-      "description": "Camarao cinza",
-      "available": true,
-      "id": 5
     }
   ]
 }
